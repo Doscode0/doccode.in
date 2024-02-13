@@ -242,8 +242,211 @@ E)MERGING:-
  VII)EXIT.
 </pre>
 
+<h4>23.INSERTION IN LINEAR ARRAYS CODE</h4><pre>
+  #include<stdio.h>
+
+#include<  stdio.h>
+  int insertion(int arr[],int size,int element, int capacity,int index)
+  {
+      if(size>=capacity)
+      {
+          return -1;
+      }
+      else{
+          for(int i=size-1;i>=index;i--)
+          {
+              arr[i+1]=arr[i];
+          }
+          arr[index]=element;
+          return 1;
+      }
+  }
+  int main()
+  {
+      int n,arr[100];
+      printf("Enter the size of array:- ");
+      scanf("%d",&n);
+      printf("Enter the array elements:- ");
+      for(int i=0;i< n;i++)
+      {
+          scanf("%d",&arr[i]);
+      }
+      printf("Enter the adding index number:- ");
+      int index,element;
+      scanf("%d",&index);
+      printf("Enter adding element:- ");
+      scanf("%d",&element);
+      insertion(arr,n,element,100,index);
+      n +=1;//n=n+1;
+      // for display result .....
+      printf("Inserted array is :- ");</pre><pre>
+        for(int i=0;i< n;i++)
+      {
+          printf("%d",arr[i]);
+      }
+      return 0;
+  }
+      </pre> </pre>
+<h4>24)DELETION FROM ARRAYS</h4>
+        <pre>       DELETE(A,N,k,ITEM)
+ 1. Step-1:Start
+ 2. Step-2: set ITEM=a[k]
+ 3. Step-3: Repeat for J=K to N-1
+       set A[J]=a[j+1]
+      [End the loop]
+  4. Step-4: Set N=N-1
+  5. Step-5: Exit.</pre>
 
 </div>
+<h4>25)DELETION FROM ARRAYS CODE</h4>
+
+<pre>#include<stdio.h>
+  int delection(int arr[],int size,int index)
+  {
+      for(int i=index;i< size-1;i++)
+      {
+          arr[i]=arr[i+1];
+      }
+  }
+  int main()
+  {
+      printf("Enter array size:- ");
+      int n;
+      scanf("%d",&n);
+      int arr[n];
+      printf("Enter the array element:- ");
+      for(int i=0;i< n;i++)
+      {
+          scanf("%d",&arr[i]);
+      }
+      printf("Enter the delete index:- ");
+      int index;
+      scanf("%d",&index);
+      delection(arr,n,index);
+      n -=1;// n=n-1;
+      //  for see the changes simplely print the array
+      for(int i=0;i< n;i++)
+      {
+          printf("%d ",arr[i]);
+      } return 0;
+  }</pre>
+  <h4>26)BUBBLE SORT</h4>
+  DEFINATION:- <br>
+  -------------------<br>
+
+    bubble sort arrange N number of array  elements by plaing the biggest element on proper position.It always arrange data in descending order.<br>
+  
+  ex-a[5]={7,6,3,9,0}<br>
+  
+  OUTPUT:-{0,3,6,7,9}
+  <br><br>
+  ALGORITHAM:-<br>
+  ----------------------<br>
+  <pre>1. Step-1:  Begin
+    2. Step-2:  Input a[5] 
+    3. Step-3:  Set 1 <- 3  //(i=3) {Note:- In algoritham don't use '='. Always use <- for set item value}
+    4. Step-4:  Repeat step 4 & 9  While(i>=0)
+    5. Step-5:  Set j <- 0 	//(j=0)
+    6. Step-6:  Repeat step 3 & 8  While(j<=i)
+    7. Step-7:  if(a[j]>a[j+1])
+          Set temp<- a[i]
+              a[j] <- a[j+1]
+        a[j+1] <-temp
+    8. Step-8:  j <- j+1
+    9. Step-9:  i<-i-1
+    10. Step-10:  print a[5]
+    11. Step-11:  Exist.
+    </pre>
+  
+    <h4>27)BUBBLE SORT CODE</h4>
+    <pre>
+      #include< stdio.h>
+      void bubble(int arr[],int n);
+      int main()
+      {
+          int n;
+          printf("Enter the size of array:- ");
+          scanf("%d",&n);
+          int arr[n];
+          printf("Enter array elements:- ");
+          for(int i=0;i< n;i++)
+          {
+              scanf("%d",&arr[i]);
+          }
+          bubble(arr,n);
+          /*Now you print the array to see changes*/
+          for(int i=0;i< n;i++)
+          {
+              printf("%d",arr[i]);
+          }
+          return 0;
+      }
+      void bubble(int arr[],int n)
+      {
+          for(int i=0;i< n-1;i++)
+          {
+              for(int j=0;j< n-1-i;j++)
+              {
+                  if(arr[j]>arr[j+1])
+                  {
+                      int satya = arr[j];/* you can also take 'temp' in place of satya*/
+                      arr[j] = arr[j+1];
+                      arr[j+1] = satya;
+                  }
+              }
+          }
+      }</pre>
+  
+<h4>28)LINEAR SEARCH</h4>
+DEFINATION:- <br>
+--------------------<br>
+It is a very basic and simple search an element in given array by travesing the any from the starting till the disred element is found.<br>
+<br>
+ALGORITHM:-<br>
+--------------------<br>
+<pre>1.Step-1: Begin
+  2.Step-2: Set a[5] <- {10,20,30,40,50}
+  3.Step-3: Set i <- 0
+  4.Step-4: Input searching item
+  5.Step-5: Repeat step 6 & 7 while(i<5)
+  6.Step-6: if a[i]=item then
+      print item found & location = i & exist
+  7.Step-7: Set i <- i+1
+  8.Step-8: if j>=5 then 
+      print item not found
+  9.Step-9: End.
+</pre>
+<h4>29)LINEAR SEARCH CODE</h4>
+
+<pre>#include< stdio.h>
+  int main()
+  {
+      int n;
+      printf("Enter the array size:- ");
+      scanf("%d",&n);
+      printf("Enter the array element:- ");
+      int arr[n];
+      for(int i=0;i< n;i++)
+      {
+          scanf("%d",&arr[i]);
+      }
+      printf("Enter the searching element:- ");
+      int item;int loc=0;
+      scanf("%d",&item);
+      for(int i=0;i< n;i++)
+      {
+          if(arr[i]==item)
+          {
+               printf("Searching item is available and index is %d ",i);
+              loc = loc + 1;
+          }
+      }
+      if(loc==0)
+      {
+           printf("searching item is not available...");
+      }
+      return 0;
+  }</pre>
 
 <script src="DSA.js"></script>
 
