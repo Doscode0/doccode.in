@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="DSA.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="search-wrapper">
+    <label for="search">Search Users</label>
+    <input type="search" id="input" placeholder="Search here..." onkeyup="searchFunction()">
+  </div>
+  <div class="user-cards" data-user-cards-container=""></div>
+  <template data-user-template>
+    <div class="card">
+      <div class="header" data-header></div>
+      <div class="body" data-body></div>
+    </div>
+  </template>
+  <div class="content-container" id="content">
+
+  <h4 id="p">1)DATA:</h4>
+ 
+
+
+Data is a collection of row facts and information.
+
+<h4 id="p">2)DATA STRUCTURE:</h4>
+Organised collection of data in particular format called data structure.data structure is a technique or method of study how the data are interrelated to each other logically or mathematically.
+<h4 id="p">3)PURPOSE OF DATA STRUCTURE:</h4>
+The main aim of data structure is to increase the efficiency of program and decrease the storage requirement.
+<h4 id="p"> 4)CLASSIFICATION OF DATA STRUCTURE:</h4>
+<pre>a)linear :         
+    (i)graph                    
+    (ii)linked list            
+    (iii)stack
+    (iv)queue
+
+        OR
+
+non linear :
+     (i)array
+     (ii)tree
+
+b)homogenous :
+     (i)array  
+
+        OR
+
+non homogenous
+     (i)structure
+     (ii)union
+
+c)static :
+(i)char a[10]
+
+        OR
+
+dynamic :
+(i)*a
+</pre>
+
+<h4 id="p">5)WHAT IS ALGORITHIM ?</h4>
+
+The step by step description of any program in general language is called algorithim.
+
+<pre>         OR </pre>
+
+ algorithim is a sequence of an clear instruction used to solving a problem .such a way that it can implimented as a program for computer.
+
+ <h4 id="p" >6)CHARACTERISTICS OF ALGORITHIM</h4>
+ <pre>
+a)input-o or more well defined inputs
+b)output-must generate atleast one output
+c)umambigious/definiteness
+d)finiteness
+e)effectiveness
+ </pre>
+<h4 id="p">7)DATATYPE AND ITS TYPE:</h4>
+datatype is a type of data which is used in the program.In other word we can say that it is used to declare a variable.
+<pre>            OR </pre>
+datatype specify how we entered data in our program and what type of data we entred.
+
+<h5>ITS TYPE</h5>
+<pre>
+i)Primary datatype<br>
+ii)Secondary datatype
+
+primary datatype :-
+
+                  SIZE
+                --------
+Int     -        2 bytes  
+char    -        1 bytes
+float   -        4 bytes
+void    -        no size
+
+
+secondary datatype :-
+
+1)Array
+2)Pointer
+3)Structure
+4)Union</pre>
+
+<h4>8)ABSTRAC DATA TYPE:</h4>
+
+Mathematically model of data objects that make up a data type as well as the functions that operate these objects.
+<br>
+
+ex--lists,graph,array along with their objects(abstrac datatype)
+
+
+<h4>DIFFERENCE BETWEEN LINEAR AND NONLINEAR</h4>
+
+<pre>
+  9) 
+  LINEAR DATA STRUCTURE         |        NON LINEAR DATA STRUCTURE
+  ______________________________|_______________________________________
+i>In this data structure The    |i>In the data structure data is organaised
+ elements are organised in      | without any sequence..
+ a sequence such as..           |
+    ex- array,srack etc         | ex-tree,graph etc
+ii>In linear data structure     |ii>In non linear d.s multiple
+single level is involved.       | levels are  involved.                               |  
+iii>it is easy to implement.    |iii>it is difficult to implement.
+iv>data element can transfered  |iv>data elements cannot be treversed in 
+ in a single run only.          | single run only.
+v>memory is not utiliged in a   | v>memory utiligation in an efficient
+efficient way.                  |  way.
+                              
+</pre>
+<h4>10)DATA STRUCTURE:</h4>
+
+Data structure is of two types there are <br> i) Primitive( ex-int,float,char,double)<br>
+<br>
+ii) Non primitive
+<br>
+<br>
+Non primitive data structure is of two types <br> 1)Linear <br>
+ii)Non-linear
+<br>
+<br>
+Linear d.s is of two types (i.e :- static,dynamic)<br<br>
+Non-linear d.s is of two types (i.e :- tree,graph)
+<h4>11)ALGORITHIM COMPLEXITY:-</h4>
+Algorithim complexity refers to the analysis of an algorithim performance in term of time and space requirement as a function of input size.
+<h4>12)SPACE COMPLEXITY:-</h4>
+Total amount of memory required by an algorithim for its complete execution called space complexity
+<h4>13) CONSTANT SPACE COMPLEXITY:-</h4>
+If any algorithim requires fixed amount of space then the space complexity is called constant space complexity.
+<pre>
+  Ex - int sqrt(int n){
+    return n*n;
+    }
+</pre>
+<h4>14)LINEAR SPACE COMPLEXITY</h4>
+If the amount of space required by algorithim is increase of input values then that space complexity is called linear space complexity.
+<pre>
+  EX-int sum(int arr[],int n){
+    int sum=0;
+    for(int sum i=0;i<=n;i++)
+         {
+            sum=sum+arr[i];
+          }
+    return sum;
+    }
+</pre>
+<h4>15) TIME COMPLEXITY:-</h4>
+Total amount of time required by an algorithim to its complete execution called time complexity.
+<h4>16) CONSTANT SPACE COMPLEXITY</h4>
+If any algorithim required fixed amount of space then the space complexity which said to be const space complexity.
+<pre>
+  Ex-
+  int sqrt(int n)
+    {
+      return n*n;
+     }
+</pre>
+<h4>17)LINEAR TIME COMPLEXITY:</h4>
+If the amount of space required by algorithim is increase of input values then that space complexity is called linear space complexity.
+<pre>
+  int sum(int a[],int n)
+  {
+    int sum=0;
+    for (int i=0;i<n;i++)
+      {
+        sum=sum+a[i];
+       }
+    return sum;
+  }
+</pre>
+<h4>18)DATA SPACE:</h4>
+It is the amount of memory use to store all the variable and constant.
+<h4>19)ARRAY</h4>
+a)Array is derived data type which is constured by the help of primitive  data type.
+b)Array is a variable which store more than one values of same data types in a continuous memory location.
+<h4>20)LINEAR ARRAY</h4>
+-A linear array is a list of a finite number n of homogenous data elements(i.e:- data element of same time )such that -
+  a)The elements of the array are referenced respetively by an index set consecutive numbers.
+  b)The elements of the array are stored respetively in successive memory location.
+<h4>21)DIFFERENT TYPES OF OPERATION IN ARRAY LINEAR DATA STRUCTURE</h4>
+<pre>
+  a)TRAVERSAL:- 
+  I)Processing each element in list.
+  II)search finding the location of element finding the location of element with a given value.
+
+b)INSERTION:-
+  -Adding new element of list
+
+c)DELETION:-
+  -Removing elements from list.
+
+d)SORTING:-
+  -Arranging the elements in sum type of order.
+
+E)MERGING:-
+  -Combining to list to be a single list.
+</pre>
+<h4>22)TRAVERSING IN A LINEAR ARRAY </h4>
+<pre>
+  i)[Initialige counter] set K=LB. 
+  ii)Repeat steps 3 and 4 while K<UB.
+  iii)[Visit elements apply process to linear array of [K]].
+  iv)[Increase the counter]  set K <- K++
+  v)[End of stop 2 loop].
+  vi)Exist.
+</pre>
+<h4>23.INSERTION IN LINEAR ARRAYS</h4>
+<pre>
+  -Here LA is a linear array with  N elements and K is a positive intiger. such that K<N This algorithm inserts an element item into the Kth position in LA. 
+ I)[Intialge counter] set J=N.
+ II)Repeat step 3&4 while J>K.
+ III)[Move jth element downward]
+     Set LA[J+1]=LA[J]
+ IV)[Decrease counter] Set J=J-1
+    [End of step 2 loop]
+ V)[Insert element set LA[K]= ITEM
+ VI)[Rest N] Set N=NH
+ VII)EXIT.
+</pre>
+
+
+</div>
+
+<script src="DSA.js"></script>
+
+</body>
+</html>
