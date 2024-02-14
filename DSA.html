@@ -185,7 +185,7 @@ If the amount of space required by algorithim is increase of input values then t
   int sum(int a[],int n)
   {
     int sum=0;
-    for (int i=0;i<n;i++)
+    for (int i=0;i< n;i++)
       {
         sum=sum+a[i];
        }
@@ -222,7 +222,7 @@ E)MERGING:-
 <h4>22)TRAVERSING IN A LINEAR ARRAY </h4>
 <pre>
   i)[Initialige counter] set K=LB. 
-  ii)Repeat steps 3 and 4 while K<UB.
+  ii)Repeat steps 3 and 4 while K< UB.
   iii)[Visit elements apply process to linear array of [K]].
   iv)[Increase the counter]  set K <- K++
   v)[End of stop 2 loop].
@@ -230,7 +230,7 @@ E)MERGING:-
 </pre>
 <h4>23.INSERTION IN LINEAR ARRAYS</h4>
 <pre>
-  -Here LA is a linear array with  N elements and K is a positive intiger. such that K<N This algorithm inserts an element item into the Kth position in LA. 
+  -Here LA is a linear array with  N elements and K is a positive intiger. such that K< N This algorithm inserts an element item into the Kth position in LA. 
  I)[Intialge counter] set J=N.
  II)Repeat step 3&4 while J>K.
  III)[Move jth element downward]
@@ -243,7 +243,7 @@ E)MERGING:-
 </pre>
 
 <h4>23.INSERTION IN LINEAR ARRAYS CODE</h4><pre>
-  #include<stdio.h>
+  #include< stdio.h>
 
 #include<  stdio.h>
   int insertion(int arr[],int size,int element, int capacity,int index)
@@ -300,7 +300,7 @@ E)MERGING:-
 </div>
 <h4>25)DELETION FROM ARRAYS CODE</h4>
 
-<pre>#include<stdio.h>
+<pre>#include< stdio.h>
   int delection(int arr[],int size,int index)
   {
       for(int i=index;i< size-1;i++)
@@ -448,12 +448,80 @@ ALGORITHM:-<br>
       return 0;
   }</pre>
 
+<h4>30)BINARY SEARCH</h4>
+It is the devide an conquer searching technique in which we have to arrage the data in particular format before searching operation .After that we find the middle element of array an campare with target element(searching element).<br>
+If item is not found the we again cheak the target elements is greater than or less than middle element, if it greater than we search right side of middle element otherwise left side of middle element.<br><br>
+ALGORITHM:-<br>
+-------------------
+<br>
+<pre>Step-1: Begin
+Step-2: Set a[5] <- {10,20,30,40,50)
+Step-1: Set lr <- 0 , up <- 4 , f <- 0
+Step-3: Input searching item
+Step-4: Reapet (6) & (8) while (lr <= up)
+Step-5: Set mid <- (lr+up)/2
+Step-6: If a[mid] = item then set f <- 1 & break
+Step-7: If a[mid] < item then set lr <- mid+1 
+                  else
+    set up <- mid-1
+Step-8: If f=1 then
+      print item found with loc = mid
+          else
+       print not found
+Step-9: Exist. </pre>
 
 
+<h4>31)BINARY SEARCH CODE</h4>
 
 
-
-
+<pre>#include< stdio.h>
+  int binarysearch(int arr[],int size,int item);
+  int main()
+  {
+      int n;
+      printf("Enter the array size:- ");
+      scanf("%d",&n);
+      int lr=0;int up=n-1;
+      int arr[n];
+      printf("Enter the array element in Ascending Order:- ");
+      for(int i=0;i< n;i++)
+      {
+          scanf("%d",&arr[i]);
+      }
+      printf("Enter the searching item:- ");
+      int item;
+      scanf("%d",&item);
+      int bs=binarysearch(arr,n,item);
+      if(bs==-1)
+      {
+          printf("no");
+      }
+      else{
+          printf("yes and Location is %d",bs);
+      }
+      return 0;
+  }
+  int binarysearch( int arr[],int size,int item)
+  {
+      int lr=0,up=size-1;// here lr is lower and up is upper
+      int f=0;int mid;
+      while(lr<=up)
+      {
+          mid=(lr+up)/2;
+          if(arr[mid]==item)
+          {
+              return mid;
+          }
+          if(arr[mid< item])
+          {
+              lr=mid+1;
+          }else{
+              up=mid-1;
+          }
+          return -1;
+      }
+  }
+</pre>
 
 
 
