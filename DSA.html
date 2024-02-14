@@ -522,7 +522,71 @@ Step-9: Exist. </pre>
       }
   }
 </pre>
+<h4>32)SPARSE MATRIX</h4>
+sparse matrices are those matrices which have the majority of their elements equal to zero.
 
+<h4>33)SPARSE MATRIX CODE</h4>
+<pre>#include< stdio.h>
+  int main(){
+      int arr[3][3];
+      printf("Enter the matrix number");
+      for(int i=0;i< 3;i++)
+      {
+          for(int j=0;j< 3;j++)
+          {
+              scanf("%d",&arr[i][j]);
+          }
+      }
+      /*IT is use for to see the input matrix it is not necessary if you want to see input matrix then write */
+      printf("\nInput matrix is\n");
+      for(int i=0;i< 3;i++)
+      {
+          for(int j=0;j< 3;j++)
+          {
+              printf("%d ",arr[i][j]);
+          }printf("\n");
+      }
+      int count=0;int z=0, nz=0;/* here z= zero ,nz= none zero */
+      for(int i=0;i< 3;i++)
+      {
+          for(int j=0;j< 3;j++)
+          {
+              if(arr[i][j]==0)
+              {
+                  z +=1;// z++
+              }else{
+                  nz +=1;//  nz++
+              }
+          }
+      } int sparse[nz][z]; int k=0;
+       if(nz>z)
+          {
+              printf("\nNot a sparse matrix:- ");
+          }
+          else{
+              for(int i=0;i< 3;i++)
+              {
+                  for(int j=0;j< 3;j++)
+                  {
+                      if(arr[i][j]!=0)
+                      {
+                          sparse[k][0]=i;
+                          sparse[k][1]=j;
+                          sparse[k][2]=arr[i][j];
+                          k++;
+                          /*Now print the sparse matrix*/
+                      }
+                  }
+              }
+          } printf("\nsparse matrix is:- \n");
+                       for(int i=0;i< nz;i++)
+                      {
+                          for(int j=0;j< 3;j++)
+                          {
+                            printf("%d ",sparse[i][j]);
+                          }printf("\n");
+                      }return 0;
+  }</pre>
 
 
   <h3>Join Us In WhatsApps...To Know All Update</h3>
