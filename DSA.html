@@ -708,7 +708,94 @@ sparse matrices are those matrices which have the majority of their elements equ
         return 0;
     }
     </pre>
-
+<h4>36)STACK</h4>
+ i)A Stack is an ordered collection of homogenous data elements, Where the insertion and deletion take place at one end know as top.<br>
+ ii)The Stack also called as LIFO(last in first out).Its means the element which is inserted last must be delected first.
+ <h4>37)WRITE A ALGORITHAM FOR PUSH OPERATION USING STACK</h4>
+ <pre>STEP-1:- Begin
+    STEP-2:- if Top = N Then 
+           print "Overflow & Exit"
+    STEP-3:- input new item
+    STEP-4:- Top=Top+1
+    STEP-5:- stack[Top] <- item
+    STEP-6:- exit.</pre>
+    <h4>38)WRITE A ALGORITHAM FOR POP OPERATION USING STACK</h4>
+    <pre>STEP-1:- Begin
+        STEP-2:- if Top = -1 Then 
+               print "Overflow & Exit"
+        STEP-3:- set item <- stack[Top]
+        STEP-4:- Top <- Top-1
+        STEP-5:- print "item deleted"
+        STEP-6:- exit.
+        </pre>
+    <h4>39)PUSH AND POP CODE USING STACK</h4>
+    <pre>#include< stdio.h>
+        #define MAX_SIZE 5
+        int stack[MAX_SIZE];
+        int top = -1;
+        void push(int item){
+            if(top==MAX_SIZE-1){
+                printf("Overflow ! & Exit\n");
+            }else{
+                stack[++top] = item;
+                printf("%d Item Inserted.\n",item);
+            }
+        }
+        void pop(){
+            if(top == -1)
+            {
+                printf("Underflow & Exit\n");
+            }else{
+                int Item = stack[top--];
+                printf("%d Item DEleted.\n",Item);
+            }
+        }
+        void display(){
+            if(top == -1){
+                printf("The stack is empty");
+            }else{
+                printf("stack element:- ");
+                for(int i=0;i<= top;i++){
+                    printf("%d ",stack[i]);
+                }printf("\n");
+            }
+        }
+        int main()
+        {
+            int choice,item;
+            printf(" 1.Push\n 2.Pop\n 3.Display\n 4.Exit\n");
+            while (1)
+            {
+                printf("Enter your choice:- ");
+                scanf("%d",&choice);
+               switch(choice)
+               {
+                case 1:
+                {
+                    printf("Enter value to Push:- ");
+                    scanf("%d",&item);
+                    push(item);break;
+                }
+                case 2:
+                {
+                    pop();break;
+                }
+                case 3:
+                {
+                    display();break;
+                }
+                case 4:
+                {
+                    return 0;
+                }
+                default :{
+                    printf("Invalid choice...\n");
+                }
+        
+               }
+            }
+            return 0;
+        }</pre>
 
   <h3>Join Us In WhatsApps...To Know All Update</h3>
   <a href="https://chat.whatsapp.com/EXHLJO97dzzDxYOS4HiEgK">https://chat.whatsapp.com/EXHLJO97dzzDxYOS4HiEgK</a>
