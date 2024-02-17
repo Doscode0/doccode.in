@@ -11,3 +11,9 @@ a{
   height: 100vh;
   background-color: #222237;
 }
+h1{
+  color: rgb(255, 119, 0);
+  text-decoration: underline;
+  text-align: center;
+  align-items: center;
+}
